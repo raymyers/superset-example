@@ -1,0 +1,25 @@
+# docker-compose.postgres.yaml
+# Superset Example: Cube
+#
+# Copyright © 2023 Dagitali LLC. All rights reserved.
+#
+# A Docker Compose configuration file. Defines services, networks, & volumes
+# for multi-container Docker applications.
+# See https://docs.docker.com/compose/compose-file/03-compose-file.
+#
+# REFERENCES:
+# 1. https://cube.dev/blog/building-metrics-dashboard-with-superset
+# 2. https://docs.docker.com/compose/compose-file/
+# 3. https://docs.docker.com/compose/compose-file/03-compose-file
+# 4. https://github.com/cube-js/cube/blob/master/examples/superset/README.md
+
+version: "2.2"
+services:
+  cube:
+    image: cubejs/cube:latest
+    env_file: .env
+    ports:
+      - 4000:4000
+      - 3306:3306
+    volumes:
+      - .:/cube/conf
