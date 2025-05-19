@@ -9,7 +9,7 @@
 # SECTION: MAIN EXECUTION =================================================== #
 
 # Download and start a container.
-docker run -d -p 8080:8088 --name superset apache/superset
+docker run -d -p 12000:8088 --name superset apache/superset:3.0.1
 
 # Setup an admin account. By default, its username and password would be set to
 # admin, but their values can be customized.

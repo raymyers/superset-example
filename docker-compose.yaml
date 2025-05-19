@@ -16,10 +16,10 @@
 version: "2.2"
 services:
   cube:
-    image: cubejs/cube:latest
+    image: cubejs/cube:v0.33.48
     env_file: .env
     ports:
-      - 4000:4000
+      - 12001:4000
       - 3306:3306
     volumes:
       - .:/cube/conf
